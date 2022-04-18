@@ -5,8 +5,12 @@ Docker file for changelog project
 2. Build changelog-backend (ROOT.war must be located in the changelog-backend/target directory).
 3. Place following script to build the container in parent directory of both (or use the commands directly).
 
-''' 
+``` 
 cp changelog-backend/target/ROOT.war changelog-docker/
 docker build -t changelog -t anotheria/changelog changelog-docker
 docker push anotheria/changelog:latest
-'''
+```
+
+Personally I put the commands in a file named build-docker.sh and run ./build-docker.sh
+
+The docker file is based on tomcat8.
