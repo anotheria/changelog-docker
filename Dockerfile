@@ -3,3 +3,5 @@ FROM anotheria/tomcat8:latest
 
 COPY ROOT.war /app/tomcat/webapps/
 
+RUN apk add --update bash
+
